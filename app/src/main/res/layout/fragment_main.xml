@@ -77,46 +77,66 @@
         android:id="@+id/containerTwo"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="335dp"
+        android:layout_height="380dp"
         app:layout_constraintTop_toBottomOf="@+id/header"
         >
 
 
         <LinearLayout
-            android:layout_marginTop="44dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="46dp"
             android:orientation="vertical"
             android:layout_width="286dp"
             android:layout_height="303dp"
-            android:background="@color/rectangleContent"
+            android:background="@drawable/rectangle_bg"
             app:layout_constraintEnd_toEndOf="parent">
 
         </LinearLayout>
 
         <ImageView
-            android:layout_marginBottom="11dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="80dp"
             android:layout_width="273dp"
             android:layout_height="250dp"
             android:src="@drawable/vegan_intro"
             />
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="32dp"
             android:layout_width="66dp"
             android:layout_height="65dp"
-            android:background="@color/favBtn"
+            android:background="@drawable/fav_btn_bg"
             >
-        </LinearLayout>
+
+            <ImageButton
+                android:layout_width="24dp"
+                android:layout_height="23dp"
+                android:background="@android:color/transparent"
+                android:foregroundGravity="center"
+                android:scaleType="fitCenter"
+
+                android:src="@drawable/favourite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@+id/containerTwo"
         android:id="@+id/reView"
         android:layout_width="409dp"
         android:layout_height="275dp"
-        android:layout_marginTop="452dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         />
 
     <!-- <LinearLayout
         android:layout_width="match_parent"

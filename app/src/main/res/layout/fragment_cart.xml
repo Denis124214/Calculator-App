@@ -71,4 +71,12 @@
                 android:background="@android:color/transparent"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartReView"
+        android:layout_width="409dp"
+        android:layout_height="610dp"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        tools:layout_editor_absoluteX="1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
